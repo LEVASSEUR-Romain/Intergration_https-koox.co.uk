@@ -1,0 +1,296 @@
+@import url(//db.onlinewebfonts.com/c/8eb8a85526b1be9565ae437ea0f24def?family=CJPZSM+HelveticaNeueLTStd-Roman);
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s ease-out;
+    font-family: "HelveticaNeueLTStd-Roman", "Helvetica", sans-serif
+}
+
+:root {
+    --menuProgressHeight: 5px;
+    --navheight: 90px;
+    --colorgreenf: #215732;
+    --colorgris: #6a6a6a;
+    --witdhSection: 85%;
+    --fixedheight: 90px;
+    --animationDurationText: 500ms;
+}
+
+html {
+    height: 100vh;
+}
+
+/*  HEADER */
+header {
+    flex: 1;
+}
+
+nav {
+    height: var(--navheight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 1rem;
+}
+
+nav ul {
+    display: flex;
+    height: var(--navheight);
+}
+
+nav ul li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+nav ul li a {
+    color: var(--colorgreenf);
+    text-decoration: none;
+    padding: 15px;
+}
+
+nav ul li:hover::after {
+    content: "";
+    height: 5px;
+    width: 100%;
+    background-color: var(--colorgreenf);
+    position: absolute;
+    bottom: 0;
+    animation: navProgress 200ms;
+}
+
+
+@keyframes navProgress {
+    0% {
+        transform: scaleX(1.1);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+/* Page */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    flex: 10;
+}
+
+section {
+    height: 100%;
+    width: var(--witdhSection);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(img/bg-pattern.png);
+    background-color: #eff3f0;
+    position: relative;
+}
+
+/* barre d'avancer sous section */
+.progresseInPage {
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.progresseInPageAdvancement {
+    background-color: var(--colorgreenf);
+    height: 5px;
+    width: 0%;
+}
+
+.pageScrolling {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+
+
+
+h1, h2 {
+    color: var(--colorgreenf);
+    font-size: 3rem;
+    letter-spacing: 10px;
+}
+
+
+/* footer */
+footer {
+    flex: 1;
+    width: var(--witdhSection);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* cube deco */
+footer::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--colorgreenf);
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+
+}
+
+footer span {
+    color: var(--colorgris);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+
+
+footer a {
+    padding: 0px 10px;
+}
+
+footer a img {
+    width: 20px;
+    height: 20px;
+}
+
+/* fleche deco */
+.down {
+    position: fixed;
+    bottom: 10px;
+    left: 49.7%;
+    font-size: 0.5rem;
+}
+
+/* Le fixed */
+.fixeRight, .fixeLeft {
+    position: fixed;
+    height: var(--fixedheight);
+    background-color: var(--colorgreenf);
+    top: 45%;
+}
+
+.fixeRight {
+    width: 120px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 5;
+}
+
+.fixeRight div {
+    background-color: white;
+    height: 3px;
+    width: 60px;
+}
+
+.fixeRight div:nth-child(2) {
+    width: 40px;
+}
+
+.fixeLeft {
+    width: 180px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+
+.fixeLeft img {
+    width: 120px;
+    height: 40px;
+}
+
+.scroll {
+    position: fixed;
+    bottom: 15%;
+    left: 45%;
+}
+
+.scroll p {
+    color: var(--colorgreenf);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+
+
+.test {
+    opacity: 0;
+    transition: transform 2s, opacity 2s;
+    transform: translateY(200px);
+}
+
+
+
+
+/* Class animation pour le js */
+.animScrollUp {
+    animation: animScrollUp var(--animationDurationText);
+}
+
+.animScrollDown {
+    animation: animScrollDown var(--animationDurationText);
+}
+
+.animStartingUp {
+    animation: animScrollUp var(--animationDurationText);
+    animation-direction: reverse;
+}
+
+.animStartingDown {
+    animation: animScrollDown var(--animationDurationText);
+    animation-direction: reverse;
+}
+
+/* Animation */
+@keyframes animScrollDown {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+}
+
+@keyframes animScrollUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+}
