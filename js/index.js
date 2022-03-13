@@ -4,33 +4,39 @@ const progresseInPageAdvancement = document.getElementsByClassName(
   "progresseInPageAdvancement"
 )[0];
 let childPageScrolling;
-const animationDurationInMs = 500;
 let currentPage = 1;
+const minimumPage = 1;
 let isAnimationRunning = false;
 let nameAnimationRunning = "";
+let isScrollUp = false;
 const animationEndUp = "animScrollUp";
 const animationEndDown = "animScrollDown";
 const animationStartUp = "animStartingUp";
 const animationStartDown = "animStartingDown";
 const pageContent = {
   1: {
-    content: "<h2>Juice Farmacy</h2>",
+    content: "<h2 class='title titleCenter'>Juice Farmacy</h2>",
+    backgroundColor: "#eff3f0",
     pourcentageBar: "0%",
   },
   2: {
-    content: "<h2>100% Natural</h2>",
+    content: "<h2 class='title titleRight'><p>100% </p> Natural</h2>",
+    backgroundColor: "#f5f2f1",
     pourcentageBar: "25%",
   },
   3: {
-    content: "<h2>col Pressed</h2>",
+    content: "<h2 class='title titleRight'><p>cold </p> Pressed</h2>",
+    backgroundColor: "#f8f5f3",
     pourcentageBar: "50%",
   },
   4: {
-    content: "<h2>Unpasterised no HHP</h2>",
+    content: "<h2 class='title titleRight'><p>Unpasterised </p> no HHP</h2>",
+    backgroundColor: "#f7f6f3",
     pourcentageBar: "75%",
   },
   5: {
-    content: "<h2>Menu</h2>",
+    content: "<h2 class='title titleCenter'>Menu</h2>",
+    backgroundColor: "#eff3f0",
     pourcentageBar: "100%",
   },
 };
@@ -43,43 +49,49 @@ window.addEventListener("wheel", (e) => {
 
 const changePage = (event) => {
   if (!isAnimationRunning) {
-    // scroll haut
-    if (event.deltaY < 0) {
-      if (currentPage !== 1) {
+    isScrollUp = event.deltaY < 0;
+    if (isScrollUp) {
+      if (currentPage !== minimumPage) {
         currentPage -= 1;
         childPageScrolling = pageScrolling.firstElementChild;
         startingAnimation(childPageScrolling, animationEndDown);
       }
-      progresseInPageAdvancement.style.width =
-        pageContent[currentPage].pourcentageBar;
-    }
-    //scroll bas
-    else {
+      MoveProgressBarBottom();
+    } else {
       if (currentPage !== numberPage) {
         currentPage += 1;
         childPageScrolling = pageScrolling.firstElementChild;
         startingAnimation(childPageScrolling, animationEndUp);
       }
-      progresseInPageAdvancement.style.width =
-        pageContent[currentPage].pourcentageBar;
+      MoveProgressBarBottom();
     }
   }
+};
+
+const MoveProgressBarBottom = () => {
+  progresseInPageAdvancement.style.width =
+    pageContent[currentPage].pourcentageBar;
 };
 
 const startingAnimation = (elementHTML, animationClasse) => {
   elementHTML.classList.toggle(animationClasse);
   isAnimationRunning = true;
-  setTimeout(newPage, animationDurationInMs);
+  elementHTML.addEventListener("animationend", () => {
+    newPage();
+  });
 };
 
 const newPage = () => {
   pageScrolling.innerHTML = pageContent[currentPage].content;
   childPageScrolling = pageScrolling.firstElementChild;
   if (childPageScrolling.classList[0] === animationEndUp) {
-    nameAnimationRunning = animationStartDown;
-  } else {
     nameAnimationRunning = animationStartUp;
+  } else {
+    nameAnimationRunning = animationStartDown;
   }
+  // on change la coleur de fond
+  pageSection.style.backgroundColor = pageContent[currentPage].backgroundColor;
+  //on gere l'animation d'arrive
   childPageScrolling.classList.toggle(nameAnimationRunning);
   childPageScrolling.addEventListener("animationend", () => {
     deleteClass(nameAnimationRunning);

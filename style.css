@@ -129,12 +129,35 @@ section {
 
 
 
-h1, h2 {
+.title {
     color: var(--colorgreenf);
     font-size: 3rem;
     letter-spacing: 10px;
+    position: relative;
+    width: 100%;
 }
 
+.titleCenter {
+    text-align: center;
+}
+
+.titleRight {
+    margin-left: 45%;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.titleRight::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    left: 220px;
+    background-color: var(--colorgreenf);
+    height: 8px;
+    width: 8px;
+    transform: rotate(45deg);
+}
 
 /* footer */
 footer {
