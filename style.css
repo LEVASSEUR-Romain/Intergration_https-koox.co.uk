@@ -240,17 +240,6 @@ footer a img {
     font-weight: 700;
 }
 
-
-
-.test {
-    opacity: 0;
-    transition: transform 2s, opacity 2s;
-    transform: translateY(200px);
-}
-
-
-
-
 /* Class animation pour le js */
 .animScrollUp {
     animation: animScrollUp var(--animationDurationText);

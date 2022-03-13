@@ -69,13 +69,13 @@ const changePage = (event) => {
 const startingAnimation = (elementHTML, animationClasse) => {
   elementHTML.classList.toggle(animationClasse);
   isAnimationRunning = true;
-  setTimeout(newPage(animationClasse), animationDurationInMs);
+  setTimeout(newPage, animationDurationInMs);
 };
 
-const newPage = (classeSting) => {
+const newPage = () => {
   pageScrolling.innerHTML = pageContent[currentPage].content;
   childPageScrolling = pageScrolling.firstElementChild;
-  if (classeSting === animationEndUp) {
+  if (childPageScrolling.classList[0] === animationEndUp) {
     nameAnimationRunning = animationStartDown;
   } else {
     nameAnimationRunning = animationStartUp;
