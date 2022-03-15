@@ -20,17 +20,20 @@ const pageContent = {
     pourcentageBar: "0%",
   },
   2: {
-    content: "<h2 class='title titleRight'><p>100% </p> Natural</h2>",
+    content:
+      "<h2 class='title titleRight'><span class='titleNumber'>. 02 .</span><p>100% </p> Natural</h2>",
     backgroundColor: "#f5f2f1",
     pourcentageBar: "25%",
   },
   3: {
-    content: "<h2 class='title titleRight'><p>cold </p> Pressed</h2>",
+    content:
+      "<h2 class='title titleRight'><span class='titleNumber'>. 03 .</span><p>cold </p> Pressed</h2>",
     backgroundColor: "#f8f5f3",
     pourcentageBar: "50%",
   },
   4: {
-    content: "<h2 class='title titleRight'><p>Unpasterised </p> no HHP</h2>",
+    content:
+      "<h2 class='title titleRight'><span class='titleNumber'>. 04 .</span><p>Unpasterised </p> no HHP</h2>",
     backgroundColor: "#f7f6f3",
     pourcentageBar: "75%",
   },
@@ -41,9 +44,7 @@ const pageContent = {
   },
 };
 const numberPage = Object.keys(pageContent).length;
-const pourcentageAdvancement = Math.ceil(100 / (numberPage - 1));
 window.addEventListener("wheel", (e) => {
-  e.preventDefault();
   changePage(e);
 });
 

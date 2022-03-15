@@ -1,0 +1,536 @@
+{
+  "about/branch-1.png": {
+    "x": 0,
+    "y": 588,
+    "w": 228,
+    "h": 197
+  },
+  "about/branch-2.png": {
+    "x": 678,
+    "y": 394,
+    "w": 150,
+    "h": 183
+  },
+  "about/branch-3.png": {
+    "x": 768,
+    "y": 588,
+    "w": 204,
+    "h": 218
+  },
+  "about/leaf-1.png": {
+    "x": 349,
+    "y": 0,
+    "w": 56,
+    "h": 49
+  },
+  "about/leaf-2.png": {
+    "x": 685,
+    "y": 250,
+    "w": 121,
+    "h": 133
+  },
+  "home/apple/apple-background-leaf.png": {
+    "x": 1712,
+    "y": 394,
+    "w": 238,
+    "h": 194
+  },
+  "home/apple/apple-leaf-flat.png": {
+    "x": 1342,
+    "y": 61,
+    "w": 106,
+    "h": 78
+  },
+  "home/apple/apple-leaf-normal.png": {
+    "x": 1602,
+    "y": 61,
+    "w": 106,
+    "h": 78
+  },
+  "home/apple/apple-leaf.png": {
+    "x": 347,
+    "y": 140,
+    "w": 121,
+    "h": 89
+  },
+  "home/apple/apple-normal.png": {
+    "x": 972,
+    "y": 588,
+    "w": 230,
+    "h": 224
+  },
+  "home/apple/apple.png": {
+    "x": 360,
+    "y": 820,
+    "w": 251,
+    "h": 244
+  },
+  "home/apple/background.png": {
+    "x": 1026,
+    "y": 61,
+    "w": 316,
+    "h": 76
+  },
+  "home/apple/cloud-1.png": {
+    "x": 988,
+    "y": 0,
+    "w": 552,
+    "h": 61
+  },
+  "home/apple/cloud-2.png": {
+    "x": 0,
+    "y": 61,
+    "w": 552,
+    "h": 61
+  },
+  "home/apple/glow.png": {
+    "x": 1202,
+    "y": 588,
+    "w": 448,
+    "h": 228
+  },
+  "home/apple/hand-flat.png": {
+    "x": 898,
+    "y": 1146,
+    "w": 386,
+    "h": 465
+  },
+  "home/apple/hand-normal.png": {
+    "x": 1284,
+    "y": 1146,
+    "w": 386,
+    "h": 465
+  },
+  "home/apple/leaf-1.png": {
+    "x": 239,
+    "y": 0,
+    "w": 39,
+    "h": 32
+  },
+  "home/apple/leaf-2.png": {
+    "x": 0,
+    "y": 140,
+    "w": 274,
+    "h": 80
+  },
+  "home/apple/leaf-3.png": {
+    "x": 0,
+    "y": 0,
+    "w": 48,
+    "h": 9
+  },
+  "home/apple/leaf-4.png": {
+    "x": 69,
+    "y": 0,
+    "w": 47,
+    "h": 19
+  },
+  "home/apple/leaf-5.png": {
+    "x": 116,
+    "y": 0,
+    "w": 47,
+    "h": 19
+  },
+  "home/apple/leaf-6.png": {
+    "x": 48,
+    "y": 0,
+    "w": 21,
+    "h": 10
+  },
+  "home/apple/leaf-7.png": {
+    "x": 278,
+    "y": 0,
+    "w": 39,
+    "h": 32
+  },
+  "home/apple/leaf-8.png": {
+    "x": 200,
+    "y": 0,
+    "w": 39,
+    "h": 30
+  },
+  "home/apple/leaf-9.png": {
+    "x": 317,
+    "y": 0,
+    "w": 32,
+    "h": 38
+  },
+  "home/intro/3roundleafs.png": {
+    "x": 1799,
+    "y": 588,
+    "w": 165,
+    "h": 232
+  },
+  "home/intro/5leafs-branche.png": {
+    "x": 1136,
+    "y": 394,
+    "w": 288,
+    "h": 193
+  },
+  "home/intro/balls-red-green.png": {
+    "x": 562,
+    "y": 0,
+    "w": 108,
+    "h": 50
+  },
+  "home/intro/branch-ball.png": {
+    "x": 1243,
+    "y": 250,
+    "w": 148,
+    "h": 136
+  },
+  "home/intro/casserole.png": {
+    "x": 485,
+    "y": 588,
+    "w": 283,
+    "h": 211
+  },
+  "home/intro/long-leaf.png": {
+    "x": 452,
+    "y": 394,
+    "w": 226,
+    "h": 179
+  },
+  "home/intro/mini-leaf-orange.png": {
+    "x": 847,
+    "y": 0,
+    "w": 141,
+    "h": 59
+  },
+  "home/intro/mini-leaf.png": {
+    "x": 552,
+    "y": 61,
+    "w": 59,
+    "h": 62
+  },
+  "home/intro/red-ball.png": {
+    "x": 476,
+    "y": 0,
+    "w": 86,
+    "h": 50
+  },
+  "home/intro/spoon.png": {
+    "x": 949,
+    "y": 820,
+    "w": 300,
+    "h": 315
+  },
+  "home/intro/tomato.png": {
+    "x": 831,
+    "y": 61,
+    "w": 86,
+    "h": 71
+  },
+  "home/menu/5leaf-branch.png": {
+    "x": 1424,
+    "y": 394,
+    "w": 288,
+    "h": 193
+  },
+  "home/menu/ail.png": {
+    "x": 783,
+    "y": 140,
+    "w": 99,
+    "h": 91
+  },
+  "home/menu/branch-olive.png": {
+    "x": 1076,
+    "y": 250,
+    "w": 167,
+    "h": 136
+  },
+  "home/menu/houx.png": {
+    "x": 806,
+    "y": 250,
+    "w": 121,
+    "h": 133
+  },
+  "home/menu/left-mini-leaf.png": {
+    "x": 319,
+    "y": 250,
+    "w": 232,
+    "h": 131
+  },
+  "home/menu/medium-leaf.png": {
+    "x": 1765,
+    "y": 140,
+    "w": 126,
+    "h": 104
+  },
+  "home/menu/mini-leaf.png": {
+    "x": 1289,
+    "y": 140,
+    "w": 298,
+    "h": 92
+  },
+  "home/menu/oignon.png": {
+    "x": 828,
+    "y": 394,
+    "w": 120,
+    "h": 186
+  },
+  "home/menu/olive.png": {
+    "x": 274,
+    "y": 140,
+    "w": 73,
+    "h": 84
+  },
+  "home/menu/orange.png": {
+    "x": 163,
+    "y": 394,
+    "w": 194,
+    "h": 149
+  },
+  "home/menu/persil.png": {
+    "x": 1622,
+    "y": 140,
+    "w": 143,
+    "h": 101
+  },
+  "home/menu/twig.png": {
+    "x": 407,
+    "y": 1146,
+    "w": 491,
+    "h": 351
+  },
+  "home/pepper/dots.png": {
+    "x": 179,
+    "y": 0,
+    "w": 21,
+    "h": 26
+  },
+  "home/pepper/feta-slice-1.png": {
+    "x": 611,
+    "y": 61,
+    "w": 74,
+    "h": 62
+  },
+  "home/pepper/feta-slice-2.png": {
+    "x": 765,
+    "y": 0,
+    "w": 82,
+    "h": 56
+  },
+  "home/pepper/feta-slice-3.png": {
+    "x": 405,
+    "y": 0,
+    "w": 71,
+    "h": 50
+  },
+  "home/pepper/feta-slice-4.png": {
+    "x": 670,
+    "y": 0,
+    "w": 63,
+    "h": 52
+  },
+  "home/pepper/feta.png": {
+    "x": 882,
+    "y": 140,
+    "w": 294,
+    "h": 92
+  },
+  "home/pepper/glow.png": {
+    "x": 1513,
+    "y": 820,
+    "w": 394,
+    "h": 326
+  },
+  "home/pepper/leaf-1.png": {
+    "x": 1176,
+    "y": 140,
+    "w": 113,
+    "h": 92
+  },
+  "home/pepper/leaf-2.png": {
+    "x": 551,
+    "y": 250,
+    "w": 134,
+    "h": 131
+  },
+  "home/pepper/leaf-3.png": {
+    "x": 793,
+    "y": 61,
+    "w": 38,
+    "h": 64
+  },
+  "home/pepper/leaf-4.png": {
+    "x": 163,
+    "y": 0,
+    "w": 16,
+    "h": 19
+  },
+  "home/pepper/leaves.png": {
+    "x": 917,
+    "y": 61,
+    "w": 109,
+    "h": 72
+  },
+  "home/pepper/pepper-1-face.png": {
+    "x": 1249,
+    "y": 820,
+    "w": 264,
+    "h": 315
+  },
+  "home/pepper/pepper-1.png": {
+    "x": 611,
+    "y": 820,
+    "w": 222,
+    "h": 265
+  },
+  "home/pepper/pepper-2.png": {
+    "x": 228,
+    "y": 588,
+    "w": 257,
+    "h": 208
+  },
+  "home/pepper/pepper-slices.png": {
+    "x": 0,
+    "y": 250,
+    "w": 319,
+    "h": 112
+  },
+  "home/tomatoes/glow.png": {
+    "x": 0,
+    "y": 1146,
+    "w": 407,
+    "h": 337
+  },
+  "home/tomatoes/knife-flat.png": {
+    "x": 1670,
+    "y": 1146,
+    "w": 98,
+    "h": 581
+  },
+  "home/tomatoes/knife-normal.png": {
+    "x": 1768,
+    "y": 1146,
+    "w": 98,
+    "h": 581
+  },
+  "home/tomatoes/slide-3-leaves-background-1.png": {
+    "x": 1587,
+    "y": 140,
+    "w": 35,
+    "h": 99
+  },
+  "home/tomatoes/slide-3-leaves-background-2.png": {
+    "x": 733,
+    "y": 0,
+    "w": 32,
+    "h": 53
+  },
+  "home/tomatoes/slide-3-leaves-background-left.png": {
+    "x": 1950,
+    "y": 394,
+    "w": 67,
+    "h": 194
+  },
+  "home/tomatoes/slide-3-leaves-background-right.png": {
+    "x": 357,
+    "y": 394,
+    "w": 95,
+    "h": 178
+  },
+  "home/tomatoes/slide-3-leaves-foreground.png": {
+    "x": 685,
+    "y": 61,
+    "w": 108,
+    "h": 64
+  },
+  "home/tomatoes/slide-3-leaves-middleground.png": {
+    "x": 833,
+    "y": 820,
+    "w": 116,
+    "h": 280
+  },
+  "home/tomatoes/slide-3-tomatoes-background-1.png": {
+    "x": 1708,
+    "y": 61,
+    "w": 85,
+    "h": 79
+  },
+  "home/tomatoes/slide-3-tomatoes-background-2.png": {
+    "x": 927,
+    "y": 250,
+    "w": 149,
+    "h": 133
+  },
+  "home/tomatoes/slide-3-tomatoes-foreground.png": {
+    "x": 468,
+    "y": 140,
+    "w": 315,
+    "h": 89
+  },
+  "home/tomatoes/slide-3-tomatoes-middleground.png": {
+    "x": 948,
+    "y": 394,
+    "w": 188,
+    "h": 186
+  },
+  "home/tomatoes/tomatoes-background-leaf-normal.png": {
+    "x": 1525,
+    "y": 61,
+    "w": 77,
+    "h": 78
+  },
+  "home/tomatoes/tomatoes-background-leaf.png": {
+    "x": 1448,
+    "y": 61,
+    "w": 77,
+    "h": 78
+  },
+  "home/tomatoes/tomatoes-background-normal.png": {
+    "x": 0,
+    "y": 394,
+    "w": 163,
+    "h": 144
+  },
+  "home/tomatoes/tomatoes-background.png": {
+    "x": 1722,
+    "y": 250,
+    "w": 163,
+    "h": 144
+  },
+  "order/ail.png": {
+    "x": 1891,
+    "y": 140,
+    "w": 120,
+    "h": 110
+  },
+  "order/leaves.png": {
+    "x": 0,
+    "y": 820,
+    "w": 360,
+    "h": 237
+  },
+  "order/oignon.png": {
+    "x": 1650,
+    "y": 588,
+    "w": 149,
+    "h": 230
+  },
+  "order/olive.png": {
+    "x": 1391,
+    "y": 250,
+    "w": 125,
+    "h": 143
+  },
+  "order/orange.png": {
+    "x": 1516,
+    "y": 250,
+    "w": 206,
+    "h": 143
+  },
+  "home/pepper/ground.png": {
+    "x": 0,
+    "y": 0,
+    "w": 747,
+    "h": 748
+  },
+  "home/tomatoes/ground.png": {
+    "x": 747,
+    "y": 0,
+    "w": 747,
+    "h": 748
+  }
+}
