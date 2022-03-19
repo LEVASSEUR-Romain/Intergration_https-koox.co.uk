@@ -1,43 +1,122 @@
+import { Placement } from "./Placement.js";
+
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-const conteneurCanvas = document.getElementById("conteneurCanvas");
-canvas.width = conteneurCanvas.clientWidth;
-canvas.height = conteneurCanvas.clientHeight;
-let img = new Image(); // Crée un nouvel élément Image
-img.src = "./img/iconeSite.png"; // Définit le chemin vers sa source
+let Json = {};
+let img = new Image();
+let nameOnJson = "";
+const defaultWidth = 1024;
+const defaultHeight = 768;
 
-//  ctx.drawImage(image, sx, sy, sLargeur, sHauteur, dx, dy, dLargeur, dHauteur);
-// sx sy sur l'image , slargeur  image source
-//dx dy c'est sur le canvas avec une hauteur et largueur
-img.addEventListener("load", function () {
-  //ctx.drawImage(img, 1156, 380, 212, 156);
-  ctx.drawImage(img, 0, 588, 228, 197, 114, 98, 256, 197);
-  // test 1
-  ctx.drawImage(
-    img,
-    positionImg[1].test.x,
-    positionImg[1].test.y,
-    positionImg[1].test.w,
-    positionImg[1].test.l,
-    0,
-    0,
-    positionImg[1].test.w,
-    positionImg[1].test.l
-  );
-  //test2
-  ctx.drawImage(
-    img,
-    positionImg[1].test2.x,
-    positionImg[1].test2.y,
-    positionImg[1].test2.w,
-    positionImg[1].test2.l,
-    0,
-    0,
-    positionImg[1].test2.w,
-    positionImg[1].test2.l
-  );
-});
+//position start
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
+fetch("./js/position.json")
+  .then((blob) => blob.json())
+  .then((result) => {
+    callBackJson(result);
+  });
+
+const callBackJson = (result) => {
+  Json = result;
+  img.src = "./img/iconeSite.png";
+  img.addEventListener("load", () => {
+    putImage(result);
+  });
+};
+
+const putImage = (json) => {
+  const page = 1;
+  if (window.innerWidth > defaultWidth || window.innerHeight > defaultHeight) {
+    ctx.scale(pourcentageScale("x"), pourcentageScale("y"));
+    for (const i in Placement[page]) {
+      nameOnJson = Placement[page][i].name;
+      ctx.drawImage(
+        img,
+        json[nameOnJson].x,
+        json[nameOnJson].y,
+        json[nameOnJson].w,
+        json[nameOnJson].h,
+        Placement[page][i].canvasX + calculAdd("x"),
+        Placement[page][i].canvasY + calculAdd("y"),
+        json[nameOnJson].w,
+        json[nameOnJson].h
+      );
+    }
+  } else {
+    for (const i in Placement[page]) {
+      nameOnJson = Placement[page][i].name;
+      ctx.drawImage(
+        img,
+        json[nameOnJson].x,
+        json[nameOnJson].y,
+        json[nameOnJson].w,
+        json[nameOnJson].h,
+        Placement[page][i].canvasX - calculDifference("x"),
+        Placement[page][i].canvasY - calculDifference("y"),
+        json[nameOnJson].w,
+        json[nameOnJson].h
+      );
+    }
+  }
+};
+
+const changeSize = () => {
+  canvas.width = canvas.clientWidth;
+  canvas.height = canvas.clientHeight;
+
+  putImage(Json);
+};
+window.addEventListener("resize", changeSize);
+
+const calculDifference = (xOrY) => {
+  if (xOrY === "x") {
+    if (defaultWidth > window.innerWidth) {
+      return (defaultWidth - window.innerWidth) / 2;
+    } else {
+      return 0;
+    }
+  } else {
+    if (defaultHeight > window.innerHeight) {
+      return (defaultHeight - window.innerHeight) / 2;
+    } else {
+      return 0;
+    }
+  }
+};
+
+const pourcentageScale = (xOrY) => {
+  if (xOrY === "x") {
+    if (window.innerWidth > defaultWidth) {
+      return 1 + (window.innerWidth - defaultWidth) / window.innerWidth;
+    } else {
+      return 1;
+    }
+  } else {
+    if (window.innerHeight > defaultHeight) {
+      return 1 + (window.innerHeight - defaultHeight) / window.innerHeight;
+    } else {
+      return 1;
+    }
+  }
+};
+
+const calculAdd = (xOrY) => {
+  if (xOrY === "x") {
+    if (window.innerWidth > defaultWidth) {
+      return (window.innerWidth - defaultWidth) / 6;
+    } else {
+      return 0;
+    }
+  } else {
+    if (window.innerHeight > defaultHeight) {
+      return -5;
+    } else {
+      return 0;
+    }
+  }
+};
 // timer requestID = window.requestAnimationFrame(callback);
 
 /* let requestID = window.requestAnimationFrame(callback);
