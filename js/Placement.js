@@ -52,8 +52,8 @@ export const Placement = {
     },
     11: {
       name: "home/intro/tomato",
-      canvasX: 600,
-      canvasY: 550,
+      canvasX: 500,
+      canvasY: 570,
     },
   },
 };
